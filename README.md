@@ -25,3 +25,6 @@ const OSS_ACCESS_KEY = '您从OSS获得的AccessKeySecret';
 const OSS_ENDPOINT = 'OSS的域名，如 oss-cn-hangzhou.aliyuncs.com';
 $bucket= "您在OSS上的Bucket";
 $urls = '您访问OSS的地址';
+
+
+团队博客：http://tech.ynho.com
