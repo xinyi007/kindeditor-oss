@@ -20,6 +20,7 @@ $php_path = dirname(__FILE__) . '/';
 $save_path = './tmp';
 //文件保存目录URL
 $bucket= "您在OSS上的Bucket";
+//绑定OSS的URL，前面要加http，比如 http://www.yoursite.com/
 $urls = '您访问OSS的地址';
 $save_url = '/attached/';
 //定义允许上传的文件扩展名

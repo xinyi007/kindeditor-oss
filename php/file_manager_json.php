@@ -7,15 +7,14 @@
  *
  */
 
-require_once 'JSON.php';
-
-$php_path = dirname(__FILE__) . '/';
-$php_url = dirname($_SERVER['PHP_SELF']) . '/';
+require_once './JSON.php';
 
 //根目录路径，可以指定绝对路径，比如 /var/www/attached/
-$root_path = $php_path . '../attached/';
-//根目录URL，可以指定绝对路径，比如 http://www.yoursite.com/attached/
-$root_url = $php_url . '../attached/';
+$root_path = './tmp/';
+//绑定OSS的URL，前面要加http，比如 http://www.yoursite.com/
+$urls = '您访问OSS的地址';
+$save_url = '/attached/';
+$root_url = $urls.$save_url;
 //图片扩展名
 $ext_arr = array('gif', 'jpg', 'jpeg', 'png', 'bmp');
 
@@ -133,5 +132,5 @@ $result['file_list'] = $file_list;
 
 //输出JSON字符串
 header('Content-type: application/json; charset=UTF-8');
-$json = new Services_JSON();
+$json = new Services_JSONs();
 echo $json->encode($result);
